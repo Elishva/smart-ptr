@@ -8,7 +8,7 @@ public:
 
     T* operator->() const;
     T& operator*()  const;
-
+    operator bool()  const
     T* get() const;
 
 private:
@@ -53,6 +53,14 @@ template<typename T>
 T& UniquePtr<T>::operator*()  const
 {
 	return *m_ptr;
+}
+
+template<typename T>
+UniquePtr<T>::operator bool()  const
+{
+    if (m_ptr)
+        return true;
+    return false;
 }
 
 
