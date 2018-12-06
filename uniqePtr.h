@@ -8,7 +8,7 @@ public:
 
     T* operator->() const;
     T& operator*()  const;
-    operator bool()  const
+    operator bool()  const;
     T* get() const;
 
 private:
